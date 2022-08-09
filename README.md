@@ -5,6 +5,7 @@
 배운 것을 정리하는 르포입니다.
 
 
+## Contents
 1. Computer Science
     1. OS
     2. Memory
@@ -47,7 +48,7 @@
         7. Transformer
         - Sequence Probability
         - Tokenizing
-        
+
 4. Python
     - argparse
     - configparser
