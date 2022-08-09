@@ -6,7 +6,7 @@
 
 
 ## Contents
-1. Computer Science
+1. CS
     1. OS
     2. Memory
     3. Data Structure
@@ -21,18 +21,8 @@
         - Greedy
         - Shortest Path
         - Sorting
-    5. Network
 
-2. Math & Statistics
-    1. Linear Algebra
-        - PCA
-    2. Multivariable Calculus
-    3. Statistics
-        - Bayesian
-        - CLT
-        - MLE
-
-3. Machine Learning
+2. ML
     1. ML
         - Tree Model
     2. DNN
@@ -48,6 +38,16 @@
         7. Transformer
         - Sequence Probability
         - Tokenizing
+    4. Vision
+    5. GAN
+
+3. Math / Stats
+    1. Math
+        - PCA
+    2. Stats
+        - Bayesian
+        - CLT
+        - MLE
 
 4. Python
     - argparse
@@ -56,3 +56,10 @@
     - json
     - pickle
     - Style
+
+5. Database
+    - SQL
+
+6. Git
+
+7. Docker
