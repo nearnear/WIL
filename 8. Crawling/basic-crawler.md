@@ -145,10 +145,12 @@ def printSummary(pageUrl, recur_cnt):
         # 페이지 제목을 출력한다.
         print(bs.h1.get_text())
         # 첫 번째 문단을 출력한다.
-        # 'p'로 첫 번째 문단 태그만 선택한다.
+        # div#mw-content-text -> p에서 첫번째 문단 태그만 선택한다.
         print(bs.find(id='mw-context-text').findall('p')[0])
+        # 편집 링크를 출력한다.
+        # li#ca-edit -> span -> a로 탐색한다.
         print(bs.find(id='ca-edit').find('span').find('a').attrs['href'])
-    except AttributeError: # 항목 페이지가 아닌 경우이다.
+    except AttributeError: 
         print('This page is not a content page!')
     
     for link in bs.findAll('a', href=re.compile('^('wiki/')')):
@@ -176,6 +178,7 @@ printSummary('')
 웹 크롤러의 코드는 전체 사이트를 탐색하는 코드와 유사하다. 다만 탐색 한계를 명시하고 예외 사항을 처리해야 실무에 활용할 수 있다.
 
 ![](img/crawler_flow.png)
+
 *웹사이트 외부 링크를 모두 탐색하는 크롤러 순서도*
 
 위는 웹 크롤러 논리의 한 예이다. 크게 두 개의 루프가 있다고 할 때, 아래의 루프는 페이지 내의 외부 링크를 탐색하고, 외부 링크가 없는 경우에는 내부 링크를 탐색하여 리스트에 추가한다.
