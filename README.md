@@ -1,38 +1,29 @@
 # WIL
-*What I Learned*
+*What I Learned* 🙋🏻
 
 
 배운 것을 정리하는 르포입니다.
 
 
-## Folder Stuctures
-1. CS
-    1. OS
-    2. Memory
-    3. Data Structure
-    4. Algorithm
+## Contents
 
-2. ML
-    1. ML
-    2. DNN
-    3. NLP
-        1. Logistic Regression
-        2. Naive Bayes
-        3. Word Embedding
-        4. N-gram
-        5. RNN
-        6. Siamese Network
-        7. Transformer
-    4. Vision
-    5. GAN
+- algorithm
+    - binary-search.md
 
-3. Stats
+- crawling
+    - basic-crawling.md
 
-4. Python
+- git
+    - git-basics.md
+    - git-commands.md
 
-5. DBMS
-    1. MySQL
+- mysql
+    - sql-basics.md
+    - sql-ddl-n-dml.md
+    - sql-join.md
+    - sql-functions.md
 
-6. Git
-
-7. Docker
+- python
+    - argparse.md
+    - configparse.md
+    - beautifulsoup.md
