@@ -85,9 +85,10 @@ while len(links) > 0:
 ```python
 # 웹 페이지 중복을 피하기 위해 집합으로 방문한 링크를 관리한다.
 pages = set()
+
 def printLinks(pageUrl, recur_cnt):
     """
-    한국어 위키백과 사이트에서 내부링크 탐색을 100번 재귀 실행한다. 
+    위키백과 사이트에서 내부 링크를 100번 재귀 탐색한다. 
     """
     # 재귀 횟수를 100번으로 제한한다.
     recur_cnt += 1
@@ -96,9 +97,9 @@ def printLinks(pageUrl, recur_cnt):
     # 프로그램이 동작하는 동안 집합이 유지되도록 한다.
     global pages
     
-    # 한국 위키피디아에서 pageUrl을 검색한다.
+    # 위키피디아에서 pageUrl을 검색한다.
     try:
-        html = urlopen(f'http://kr.wikipedia.org/{pageUrl}')
+        html = urlopen(f'http://en.wikipedia.org/{pageUrl}')
     except HTTPError as e:
         print(e)
     except URLError as e:
@@ -132,13 +133,13 @@ pages = set()
 
 def printSummary(pageUrl, recur_cnt):
     """
-    한국어 위키백과 사이트에서 내부링크를 탐색하며 페이지 제목과 첫번째 문단, 편집 링크를 출력한다.
+    위키백과 사이트에서 내부링크를 탐색하며 페이지 제목과 첫번째 문단, 편집 링크를 출력한다.
     """
     recur_cnt += 1
     if recur_cnt > 100: return
 
     global pages
-    html = urlopen(f'http://kr.wikipedia.org/{pageUrl}')
+    html = urlopen(f'http://en.wikipedia.org/{pageUrl}')
     bs = BeautifulSoup(html.read(), 'html.parser')
 
     try: # 다음을 모두 수행하는 경우 항목 페이지이다.
