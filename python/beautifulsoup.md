@@ -112,7 +112,7 @@ print(bs.tag.subTag) # tag, subTag는 가상의 태그.
 
 1. 자식(children)과 자손(descendants) 다루기
     - 자식은 부모보다 한 태그 아래에 있고, 자손은 조상보다 하위 단계에 있는 모든 태그이다. BeautifulSoup는 항상 선택된 태그의 자손을 다룬다.
-    - 자식만 찾을 때는 `.children`을 사용한다.
+    - 자식만 찾을 때는 `.contents` 또는 `.children`을 사용한다. 전자는 리스트를 반환하며, 후자는 iterator를 반환한다.
         ```python
         for child in bs.find('span', {'class':'green'}).children:
             print(child)

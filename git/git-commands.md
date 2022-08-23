@@ -46,7 +46,7 @@
     ```
 
 
-## 3. 커밋 명령어 (Commit commands)
+## 3. 스테이징 & 커밋 명령어 (Staging & Commit commands)
 * 현재 디렉토리에서 새로운 깃 르포 생성하기
     ```bash
     # initialize an empty git repository in current directory
@@ -58,12 +58,42 @@
     git status
     ```
 
-### 커밋하기
+### 스테이징 에리어 조작하기
 * 파일 file_name.py를 스테이징 에리어에 올리기 (커밋 준비)
     ```bash
     # command git to track follwing file
     git add file_name.py
     ```
+* 모든 변경 사항 스테이징 에리어에 올리기
+    ```bash
+    # stage every change in the staging area
+    git add .
+    ```
+* 스테이징 되었지만 커밋되지 않은 파일 출력하기
+    ```bash
+    # alias to --cached, show all staged but not commited files
+    git diff --staged
+    ```
+* 스테이징 에리어 리셋하기
+    ```bash
+    # reset(clear) staging area
+    git reset HEAD --
+    ```
+* 파일 file1.py의 이름을 file2.py로 변경하기
+    ```bash
+    # rename file1 with file2
+    # similar to Linux mv command
+    git mv [file1.py] [file2.py]
+    ```
+* 파일 file_name.py 삭제하기
+    ```bash
+    # remove file_name.py from working space
+    # similar to Linux rm command
+    git rm [file_name.py]
+    ```
+
+
+### 커밋하기
 * 커밋 메시지 창을 열며 현재 스테이징 에리어에 있는 것을 전부 커밋하기
     ```bash
     # commit everything in current staging area
@@ -111,23 +141,6 @@
     ```bash
     # similar to Linux diff command
     git diff [commit_id1] [commit_id2]
-    ```
-* 스테이징 되었지만 커밋되지 않은 파일 출력하기
-    ```bash
-    # alias to --cached, show all staged but not commited files
-    git diff --staged
-    ```
-* 파일 file1.py의 이름을 file2.py로 변경하기
-    ```bash
-    # rename file1 with file2
-    # similar to Linux mv command
-    git mv [file1.py] [file2.py]
-    ```
-* 파일 file_name.py 삭제하기
-    ```bash
-    # remove file_name.py from working space
-    # similar to Linux rm command
-    git rm [file_name.py]
     ```
 
 ### 커밋 되돌리기
