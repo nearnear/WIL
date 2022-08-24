@@ -5,25 +5,29 @@
 배운 것을 정리하는 르포입니다.
 
 
-## Contents
+### All Files
 
-- algorithm
-    - binary-search.md
+    - Algorithm
+        - binary-search.md
 
-- crawling
-    - basic-crawling.md
+    - Crawling
+        - basic-crawling.md
 
-- git
-    - git-basics.md
-    - git-commands.md
+    - CSA (Computer System Architecture)
+        - cpu-components.md
+        - data.md
 
-- mysql
-    - sql-basics.md
-    - sql-ddl-n-dml.md
-    - sql-join.md
-    - sql-functions.md
+    - Git
+        - git-basics.md
+        - git-commands.md
 
-- python
-    - argparse.md
-    - configparse.md
-    - beautifulsoup.md
+    - MySQL
+        - sql-basics.md
+        - sql-ddl-n-dml.md
+        - sql-join.md
+        - sql-functions.md
+
+    - Python
+        - argparse.md
+        - configparse.md
+        - beautifulsoup.md
