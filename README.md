@@ -15,7 +15,9 @@
 
     - CSA (Computer System Architecture)
         - cpu-components.md
+        - cpu-performance.md
         - data.md
+        - insturction.md
 
     - Git
         - git-basics.md
@@ -31,3 +33,4 @@
         - pkg-argparse.md
         - pkg-configparse.md
         - pkg-beautifulsoup.md
+        - pkg-json.md
