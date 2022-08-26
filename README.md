@@ -28,6 +28,6 @@
         - sql-functions.md
 
     - Python
-        - argparse.md
-        - configparse.md
-        - beautifulsoup.md
+        - pkg-argparse.md
+        - pkg-configparse.md
+        - pkg-beautifulsoup.md
