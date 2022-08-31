@@ -19,6 +19,9 @@ OS란 시스템의 자원과 동작을 관리하는 소프트웨어이다.
 - 시스템 호출(system call)은 명령어를 통해 발생하는 소프트웨어 인터럽트로, 자원에 접근하기 위해 사용자 모드를 커널 모드로 전환하기 위한 요청이다.
 - CPU가 실행중인 모드는 플래그 레지스터의 superviser flag에 기록된다.
 
+#### [참고] 시스템 호출의 종류
+- [리눅스 시스템 호출](https://kangtegong.github.io/self-learning-cs/system_calls/syscalls.html)
+
 #### [참고] VM; Virtual Machine 과 하이퍼바이저 모드(Hypervisor mode)
 - VM은 소프트웨어로 구현한 가상 컴퓨터로, 새로운 OS와 프로그램을 설치하고 실행할 수 있다.
 - 실행중인 VM 또한 프로세스이므로 사용자 모드로 작동하는데, VM 위에서 실행하는 프로세스가 자원을 할당받으려면 사용자 모드인 VM과 충돌하게 된다.
