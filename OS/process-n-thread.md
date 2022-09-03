@@ -129,7 +129,7 @@ OS의 PCB란 프로세스의 실행 순서와 자원 배분을 관리하는 자�
 - 반면 프로세스의 (코드, 데이터, 힙 메모리) 자원을 공유한다.
 
 
-#### 리눅스는 프로세스와 스레드를 구분없이 task로 일컫는다.
+#### [참고] 리눅스는 프로세스와 스레드를 구분없이 task로 일컫는다.
 ```
 Both threads and processes are really just one thing: a "context of
 execution". Trying to artificially distinguish different cases is just
@@ -159,3 +159,9 @@ https://lkml.iu.edu/hypermail/linux/kernel/9608/0191.html by Linus Torvalds
 - 멀티스레드는 context switching에 드는 시간이 절약하고, overhead가 적다.
 - 멀티프로세스는 자원을 공유하지 않아 각각 독립적으로 실행되는 반면, 멀티스레드는 자원을 공유하므로 서로 통신할 수 있다.
 - 여러 장점에도 불구하고, 멀티스레드 환경에서 하나의 스레드에 생긴 문제가 프로세스 전체에 영향을 줄 수 있다. 따라서 멀티프로세스가 코딩과 디버깅은 더 간편하다.
+
+#### [참고] IPC; Inter-Process Communication
+프로세스 사이에는 기본적으로 자원을 공유하지 않지만, 자원을 공유하는 것이 가능하며 이를 IPC 라고 한다. 
+- 예를 들어 한 프로세스가 파일을 쓰고 다음 프로세스가 쓰여진 파일을 읽는다면 파일을 통해 프로세스 간 통신이 이루어진 것으로 볼 수 있다. 
+- 또 프로세스 간에 서로 공유하는 메모리 영역을 shared memory라고 한다.
+- 이외에도 소켓, 파이프 등을 통해 프로세스들이 통신할 수 있다.
